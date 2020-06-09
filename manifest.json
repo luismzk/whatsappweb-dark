@@ -10,7 +10,7 @@
 	"content_scripts": [
 		{
 			"matches": ["https://web.whatsapp.com/"],
-			"js": ["jquery-3.5.1.slim.min.js", "wsScript.js"],
+			"js": ["wsScript.js"],
       		"run_at": "document_end"
 		}
 	],
