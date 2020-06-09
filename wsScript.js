@@ -22,14 +22,16 @@ if (changeMode){
 			chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 	      		chrome.tabs.executeScript(
 	          		tabs[0].id,
-	          		{code: '$("body").addClass("dark")'}
+	          		//{code: '$("body").addClass("dark")'}
+	          		{code: 'document.getElementsByTagName("body")[0].classList.add("dark")'}
 	          	);
 			});
 		}else{
 			chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 	      		chrome.tabs.executeScript(
 	          		tabs[0].id,
-	          		{code: '$("body").removeClass("dark")'}
+	          		//{code: '$("body").addClass("dark")'}
+	          		{code: 'document.getElementsByTagName("body")[0].classList.remove("dark")'}
 	          	);
 			});
 		}
@@ -45,18 +47,20 @@ window.onload=function(){
 				chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 		      		chrome.tabs.executeScript(
 		          		tabs[0].id,
-		          		{code: '$("body").addClass("dark")'}
+	          		//{code: '$("body").addClass("dark")'}
+	          		{code: 'document.getElementsByTagName("body")[0].classList.add("dark")'}
 		          	);
 				});
 	        }else{
 				chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 		      		chrome.tabs.executeScript(
 		          		tabs[0].id,
-		          		{code: '$("body").removeClass("dark")'}
+	          		//{code: '$("body").addClass("dark")'}
+	          		{code: 'document.getElementsByTagName("body")[0].classList.remove("dark")'}
 		          	);
 				});
 	        }
-	         
+
         }
     });
 }
